@@ -24,5 +24,5 @@ function canvifonsbttn(){
 }
 
 function canvifonsbttnNofocus(){
-  document.body.style.backgroundColor = 'orange'
+  document.body.style.backgroundColor = 'orange '
 }
