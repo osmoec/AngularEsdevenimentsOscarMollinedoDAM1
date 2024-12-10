@@ -236,6 +236,15 @@
       <button (click)="botoreinicia()" >reseteja</button>
       <iframe id="videosecret" hidden width="560" height="315" src="https://www.youtube.com/embed/RCA3EfKUJMw?si=uRVEhXeno63UT0DQ" >
       </iframe>
+      <form name="formulari" method="post">
+        <p>nom</p>
+        <input type="text" name="nom" [(ngModel)]="nom">
+
+        <p>cognom</p>
+        <input type="text" name="cognom" [(ngModel)]="cognom">
+
+        <input type="submit" (click)="concatena()" >
+      </form>
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
     <div class="right-side">

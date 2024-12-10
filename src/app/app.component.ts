@@ -1,10 +1,11 @@
 import {Component, OnInit} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {Implement} from '@angular/cli/lib/config/workspace-schema';
+import {FormsModule} from '@angular/forms';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, FormsModule],
   templateUrl: './app.component.html',
   standalone: true,
   styleUrl: './app.component.css'
@@ -14,6 +15,8 @@ export class AppComponent implements OnInit {
 
   sumastring: string = ""
   contadorB: number = 0
+  nom: string = ""
+  cognom: string = ""
 
   constructor() {}
 
@@ -36,6 +39,7 @@ export class AppComponent implements OnInit {
         document.getElementById('videosecret').setAttribute('hidden')
       }
     })
+    console.log(this.nom+" "+this.cognom)
   }
 
   protected readonly canvifonsbttn = canvifonsbttn;
@@ -43,6 +47,7 @@ export class AppComponent implements OnInit {
 
   protected readonly botoclicat = botoclicat;
   protected readonly botoreinicia = botoreinicia;
+  protected readonly concatena = concatena;
 }
 function canvifonsbttn(){
   document.body.style.backgroundColor = 'blue'
@@ -60,4 +65,6 @@ function botoreinicia(this: AppComponent){
   this.contadorB = 0
 }
 
-
+function concatena(this: AppComponent){
+  console.log(this.nom+" "+this.cognom)
+}
