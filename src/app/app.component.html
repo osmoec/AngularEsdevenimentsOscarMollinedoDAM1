@@ -245,6 +245,25 @@
 
         <input type="submit" (click)="concatena()" >
       </form>
+      <form name="calculadora" method="post">
+        <p>numero 1</p>
+        <input type="number" name="numero1" [(ngModel)]="numero1">
+
+        <p>numero 2</p>
+        <input type="number" name="numero2" [(ngModel)]="numero2">
+
+        <p>resultat</p>
+        <input  readonly type="number" name="resultat" [(ngModel)]="resultat">
+
+        <br>
+        <br>
+
+        <button title="suma" (click)="calculadoraSUM()" >suma</button>
+        <button title="resta"  (click)="calculadoraRES()" >resta</button>
+        <button title="multiplica" (click)="calculadoraMUL()" >multiplicacio</button>
+        <button title="divideix" (click)="calculadoraDIV()" >diviso</button>
+      </form>
+
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
     <div class="right-side">

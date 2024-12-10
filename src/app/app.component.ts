@@ -17,6 +17,9 @@ export class AppComponent implements OnInit {
   contadorB: number = 0
   nom: string = ""
   cognom: string = ""
+  numero1: number = 0
+  numero2: number = 0
+  resultat: number = 0
 
   constructor() {}
 
@@ -48,6 +51,10 @@ export class AppComponent implements OnInit {
   protected readonly botoclicat = botoclicat;
   protected readonly botoreinicia = botoreinicia;
   protected readonly concatena = concatena;
+  protected readonly calculadoraSUM = calculadoraSUM;
+  protected readonly calculadoraRES = calculadoraRES;
+  protected readonly calculadoraMUL = calculadoraMUL;
+  protected readonly calculadoraDIV = calculadoraDIV;
 }
 function canvifonsbttn(){
   document.body.style.backgroundColor = 'blue'
@@ -67,4 +74,20 @@ function botoreinicia(this: AppComponent){
 
 function concatena(this: AppComponent){
   console.log(this.nom+" "+this.cognom)
+}
+
+function calculadoraSUM(this: AppComponent){
+  this.resultat = this.numero1 + this.numero2
+}
+
+function calculadoraRES(this: AppComponent){
+  this.resultat = this.numero1 - this.numero2
+}
+
+function calculadoraMUL(this: AppComponent){
+  this.resultat = this.numero1 * this.numero2
+}
+
+function calculadoraDIV(this: AppComponent){
+  this.resultat = this.numero1 / this.numero2
 }
