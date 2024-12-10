@@ -32,6 +32,8 @@ export class AppComponent implements OnInit {
   protected readonly canvifonsbttn = canvifonsbttn;
   protected readonly canvifonsbttnNofocus = canvifonsbttnNofocus;
 
+  protected readonly botoclicat = botoclicat;
+  protected readonly botoreinicia = botoreinicia;
 }
 function canvifonsbttn(){
   document.body.style.backgroundColor = 'blue'
@@ -41,5 +43,12 @@ function canvifonsbttnNofocus(){
   document.body.style.backgroundColor = 'orange '
 }
 
+function botoclicat(this: AppComponent){
+  this.contadorB += 1
+}
+
+function botoreinicia(this: AppComponent){
+  this.contadorB = 0
+}
 
 

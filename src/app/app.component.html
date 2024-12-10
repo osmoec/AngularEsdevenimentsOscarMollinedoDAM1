@@ -231,6 +231,9 @@
       <button (mouseout)="canvifonsbttnNofocus()"  (click)="canvifonsbttn()" >clica</button>
       <p>tecla clicada </p>
       <p id="teclapresionada"></p>
+      <p>clica al boto abaix, vegades clicat: {{this.contadorB}}</p>
+      <button (click)="botoclicat()" >clica</button>
+      <button (click)="botoreinicia()" >reseteja</button>
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
     <div class="right-side">
