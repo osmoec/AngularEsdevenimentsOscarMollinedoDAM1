@@ -2,10 +2,12 @@ import {Component, OnInit} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {Implement} from '@angular/cli/lib/config/workspace-schema';
 import {FormsModule} from '@angular/forms';
+import {Editor} from 'primeng/editor';
+import {InputOtp} from 'primeng/inputotp';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, FormsModule],
+  imports: [RouterOutlet, FormsModule, Editor, InputOtp],
   templateUrl: './app.component.html',
   standalone: true,
   styleUrl: './app.component.css'
@@ -20,6 +22,8 @@ export class AppComponent implements OnInit {
   numero1: number = 0
   numero2: number = 0
   resultat: number = 0
+  textprova: string = ""
+  numeroprova: number = 0
 
   constructor() {}
 
@@ -91,3 +95,4 @@ function calculadoraMUL(this: AppComponent){
 function calculadoraDIV(this: AppComponent){
   this.resultat = this.numero1 / this.numero2
 }
+

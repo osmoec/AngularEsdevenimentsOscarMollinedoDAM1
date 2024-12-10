@@ -263,7 +263,8 @@
         <button title="multiplica" (click)="calculadoraMUL()" >multiplicacio</button>
         <button title="divideix" (click)="calculadoraDIV()" >diviso</button>
       </form>
-
+      <p-editor [(ngModel)]="textprova" [style]="{ height: '320px' }" />
+      <p-inputotp [(ngModel)]="numeroprova" [mask]="true" />
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
     <div class="right-side">
