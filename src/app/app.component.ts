@@ -21,13 +21,11 @@ export class AppComponent implements OnInit {
     document.body.addEventListener('keydown',(tecla: KeyboardEvent) =>{
       let camp = document.getElementById("teclapresionada")
       // @ts-ignore
-      camp.innerText = tecla.key
+      this.sumastring += tecla.key
+      // @ts-ignore
+      camp.innerText = this.sumastring;
       // @ts-ignore
       camp.style.fontSize = '70px'
-    })
-    document.body.addEventListener('keyup',() =>{
-      // @ts-ignore
-      document.getElementById("teclapresionada").innerText = ""
     })
   }
 
@@ -42,5 +40,6 @@ function canvifonsbttn(){
 function canvifonsbttnNofocus(){
   document.body.style.backgroundColor = 'orange '
 }
+
 
 
