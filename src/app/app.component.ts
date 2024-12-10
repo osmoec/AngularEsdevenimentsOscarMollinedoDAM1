@@ -26,6 +26,15 @@ export class AppComponent implements OnInit {
       camp.innerText = this.sumastring;
       // @ts-ignore
       camp.style.fontSize = '70px'
+      if (this.sumastring === "qwerty"){
+        let video = document.getElementById('videosecret')
+        // @ts-ignore
+        video.removeAttribute('hidden')
+      }
+      else {
+        // @ts-ignore
+        document.getElementById('videosecret').setAttribute('hidden')
+      }
     })
   }
 
