@@ -245,6 +245,10 @@
 
         <input type="submit" (click)="concatena()" >
       </form>
+
+      <div id="divPrincipal" (click)="">
+        <p>Calculadora de Oscar Mollinedo</p>
+        <img src="https://www.papyser.com/catalogo/4717579.jpg" width="500" height="500">
       <form name="calculadora" method="post">
         <p>numero 1</p>
         <input type="number" name="numero1" [(ngModel)]="numero1">
@@ -263,8 +267,11 @@
         <button title="multiplica" (click)="calculadoraMUL()" >multiplicacio</button>
         <button title="divideix" (click)="calculadoraDIV()" >diviso</button>
       </form>
-      <p-editor [(ngModel)]="textprova" [style]="{ height: '320px' }" />
-      <p-inputotp [(ngModel)]="numeroprova" [mask]="true" />
+      </div>
+      <br>
+      <p-password (paste)="contrasenyaC()" [(ngModel)]="textprova" [feedback]="false" />
+      <br>
+      <p-knob (mousemove)="canvimouse($event)" [(ngModel)]="numeroprova2" />
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
     <div class="right-side">

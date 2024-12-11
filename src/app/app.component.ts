@@ -2,12 +2,19 @@ import {Component, OnInit} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {Implement} from '@angular/cli/lib/config/workspace-schema';
 import {FormsModule} from '@angular/forms';
-import {Editor} from 'primeng/editor';
-import {InputOtp} from 'primeng/inputotp';
+import { EditorModule } from 'primeng/editor';
+import {KnobModule} from 'primeng/knob';
+import {MeterGroupModule} from 'primeng/metergroup';
+import {PaginatorModule} from 'primeng/paginator';
+import {ColorPickerModule} from 'primeng/colorpicker';
+import {ToastModule} from 'primeng/toast';
+import {Button} from 'primeng/button';
+import {ToggleButtonModule} from 'primeng/togglebutton';
+import {PasswordModule} from 'primeng/password';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, FormsModule, Editor, InputOtp],
+  imports: [RouterOutlet, FormsModule, EditorModule, KnobModule, MeterGroupModule, PaginatorModule, ColorPickerModule, ToastModule, ToggleButtonModule, PasswordModule],
   templateUrl: './app.component.html',
   standalone: true,
   styleUrl: './app.component.css'
@@ -23,7 +30,7 @@ export class AppComponent implements OnInit {
   numero2: number = 0
   resultat: number = 0
   textprova: string = ""
-  numeroprova: number = 0
+  numeroprova2: number = 0
 
   constructor() {}
 
@@ -59,6 +66,8 @@ export class AppComponent implements OnInit {
   protected readonly calculadoraRES = calculadoraRES;
   protected readonly calculadoraMUL = calculadoraMUL;
   protected readonly calculadoraDIV = calculadoraDIV;
+  protected readonly canvimouse = canvimouse;
+  protected readonly contrasenyaC = contrasenyaC;
 }
 function canvifonsbttn(){
   document.body.style.backgroundColor = 'blue'
@@ -96,3 +105,16 @@ function calculadoraDIV(this: AppComponent){
   this.resultat = this.numero1 / this.numero2
 }
 
+function canvimouse(this: AppComponent, event: MouseEvent){
+  let mx = event.clientX;
+
+  this.numeroprova2 = mx
+}
+
+function contrasenyaC(this: AppComponent){
+  console.log("han enganxat algo al camp contrasenya")
+}
+
+function rotarImgDivPrin(){
+
+}
