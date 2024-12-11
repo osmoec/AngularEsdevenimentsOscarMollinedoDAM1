@@ -56,65 +56,59 @@ export class AppComponent implements OnInit {
     console.log(this.nom+" "+this.cognom)
   }
 
-  protected readonly canvifonsbttn = canvifonsbttn;
-  protected readonly canvifonsbttnNofocus = canvifonsbttnNofocus;
 
-  protected readonly botoclicat = botoclicat;
-  protected readonly botoreinicia = botoreinicia;
-  protected readonly concatena = concatena;
-  protected readonly calculadoraSUM = calculadoraSUM;
-  protected readonly calculadoraRES = calculadoraRES;
-  protected readonly calculadoraMUL = calculadoraMUL;
-  protected readonly calculadoraDIV = calculadoraDIV;
-  protected readonly canvimouse = canvimouse;
-  protected readonly contrasenyaC = contrasenyaC;
-}
-function canvifonsbttn(){
-  document.body.style.backgroundColor = 'blue'
-}
+  canvifonsbttn(){
+    document.body.style.backgroundColor = 'blue'
+  }
 
-function canvifonsbttnNofocus(){
-  document.body.style.backgroundColor = 'orange '
-}
+  canvifonsbttnNofocus(){
+    document.body.style.backgroundColor = 'orange '
+  }
 
-function botoclicat(this: AppComponent){
-  this.contadorB += 1
-}
+  botoclicat(){
+    this.contadorB += 1
+  }
 
-function botoreinicia(this: AppComponent){
-  this.contadorB = 0
-}
+  botoreinicia(){
+    this.contadorB = 0
+  }
 
-function concatena(this: AppComponent){
-  console.log(this.nom+" "+this.cognom)
-}
+  concatena(){
+    console.log(this.nom+" "+this.cognom)
+  }
 
-function calculadoraSUM(this: AppComponent){
-  this.resultat = this.numero1 + this.numero2
-}
+  calculadoraSUM(){
+    this.resultat = this.numero1 + this.numero2
+  }
 
-function calculadoraRES(this: AppComponent){
-  this.resultat = this.numero1 - this.numero2
-}
+  calculadoraRES(){
+    this.resultat = this.numero1 - this.numero2
+  }
 
-function calculadoraMUL(this: AppComponent){
-  this.resultat = this.numero1 * this.numero2
-}
+  calculadoraMUL(){
+    this.resultat = this.numero1 * this.numero2
+  }
 
-function calculadoraDIV(this: AppComponent){
-  this.resultat = this.numero1 / this.numero2
-}
+  calculadoraDIV(){
+    this.resultat = this.numero1 / this.numero2
+  }
 
-function canvimouse(this: AppComponent, event: MouseEvent){
-  let mx = event.clientX;
+  canvimouse(event: MouseEvent){
+    let mx = event.clientX;
 
-  this.numeroprova2 = mx
-}
+    this.numeroprova2 = mx
+  }
 
-function contrasenyaC(this: AppComponent){
-  console.log("han enganxat algo al camp contrasenya")
-}
+  contrasenyaC(){
+    console.log("han enganxat algo al camp contrasenya")
+  }
 
-function rotarImgDivPrin(){
+  rotarImgDivPrin(){
+    let imatge = document.getElementById('imatgeDivPrin')
+    // @ts-ignore
+    imatge.setAttribute("class", "rotar");
+    setTimeout(()=>{// @ts-ignore
+      imatge.setAttribute("class", "rotarimg")}, 1000)
+  }
 
 }

@@ -246,9 +246,9 @@
         <input type="submit" (click)="concatena()" >
       </form>
 
-      <div id="divPrincipal" (click)="">
+      <div id="divPrincipal" (click)="rotarImgDivPrin()">
         <p>Calculadora de Oscar Mollinedo</p>
-        <img src="https://www.papyser.com/catalogo/4717579.jpg" width="500" height="500">
+        <img class="rotarimg" id="imatgeDivPrin" src="https://www.papyser.com/catalogo/4717579.jpg" width="500" height="500">
       <form name="calculadora" method="post">
         <p>numero 1</p>
         <input type="number" name="numero1" [(ngModel)]="numero1">
